@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./icons/icon-192.png">
+<title>Dig Dug: Cavern Quest</title>
+<link rel="stylesheet" href="./css/styles.css?v=3">
+</head>
+<body>
+<header class="topbar">
+  <strong>Dig Dug: Cavern Quest</strong>
+  <span class="muted" id="status">Ready</span>
+  <div class="spacer"></div>
+  <button class="btn" id="btnPause">Pause (P)</button>
+  <button class="btn" id="btnRestart">Restart (R)</button>
+</header>
+<main>
+  <div class="stageWrap">
+    <canvas id="stage" width="480" height="640" tabindex="0" aria-label="Game canvas"></canvas>
+    <div class="hud" id="hud">Score 0 · Lives 3 · Level 1</div>
+  </div>
+  <div class="touchpad">
+    <button class="tbtn" data-dir="left">◀</button>
+    <div class="v">
+      <button class="tbtn" data-dir="up">▲</button>
+      <button class="tbtn" data-dir="down">▼</button>
+    </div>
+    <button class="tbtn" data-dir="right">▶</button>
+    <button class="tbtn pump" id="btnPump">🪠</button>
+  </div>
+</main>
+<div class="overlay" id="overlay">
+  <div class="card">
+    <h2 class="title" id="ovTitle">Paused</h2>
+    <p id="ovMsg">Arrows/WASD to dig. Space to pump.</p>
+    <div class="row">
+      <button class="btn" id="ovResume">Resume</button>
+      <button class="btn" id="ovRestart">Restart</button>
+    </div>
+  </div>
+</div>
+<footer class="bottombar"><small>PWA • Network-first HTML • Touch controls</small></footer>
+<script defer type="module" src="./js/main.js?v=3"></script>
+</body></html>
